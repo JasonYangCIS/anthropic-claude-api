@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that parses an AWS S3 bucket name from an S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and returns just the bucket name."
+  },
+  {
+    "task": "Create a JSON CloudFormation template snippet that defines an AWS IAM role with a trust policy allowing EC2 instances to assume it."
+  },
+  {
+    "task": "Write a regular expression that matches valid AWS access key IDs, which always start with 'AKIA' followed by 16 alphanumeric characters."
+  }
+]
