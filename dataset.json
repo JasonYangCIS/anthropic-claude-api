@@ -1,11 +1,11 @@
 [
   {
-    "task": "Write a Python function that parses an AWS S3 bucket name from an S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and returns just the bucket name."
+    "task": "Write a Python function that extracts the AWS account ID from an ARN string. The function should take an ARN like 'arn:aws:s3:::my-bucket' or 'arn:aws:ec2:us-east-1:123456789012:instance/i-1234567890abcdef0' and return the account ID if present, or None if not."
   },
   {
-    "task": "Create a JSON CloudFormation template snippet that defines an AWS IAM role with a trust policy allowing EC2 instances to assume it."
+    "task": "Create a JSON object that represents an AWS IAM policy allowing read-only access to a specific S3 bucket named 'my-data-bucket'. The policy should include the Principal, Effect, Action, and Resource fields with appropriate values."
   },
   {
-    "task": "Write a regular expression that matches valid AWS access key IDs, which always start with 'AKIA' followed by 16 alphanumeric characters."
+    "task": "Write a regular expression that matches valid AWS S3 bucket names. Valid bucket names must be 3-63 characters long, contain only lowercase letters, numbers, hyphens, and periods, start and end with a letter or number, and cannot contain consecutive hyphens or end with a hyphen."
   }
 ]
