@@ -1,0 +1,54 @@
+[
+  {
+    "output": "```json\n[\n  \"Climate modeling\",\n  \"Greenhouse gas emissions\",\n  \"Global precipitation patterns\",\n  \"Agricultural productivity\",\n  \"Carbon pricing mechanisms\",\n  \"Emissions reductions\",\n  \"Climate mitigation\",\n  \"Agricultural sector emissions\",\n  \"Crop yields\",\n  \"Sub-Saharan Africa\",\n  \"Carbon markets\",\n  \"Agricultural subsidies\",\n  \"Technology transfer\",\n  \"Policy frameworks\",\n  \"Monitoring and verification\",\n  \"Burden-sharing\",\n  \"Developed and developing nations\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent climate modeling studies demonstrate that anthropogenic greenhouse gas emissions are driving significant shifts in global precipitation patterns, with implications for agricultural productivity across multiple regions. Economic analyses suggest that carbon pricing mechanisms could incentivize emissions reductions while generating substantial government revenue; however, policymakers face competing priorities between immediate fiscal constraints and long-term climate mitigation goals. The agricultural sector, responsible for approximately 14% of global emissions, simultaneously represents a critical adaptation frontier, as crop yields in sub-Saharan Africa are projected to decline 20-40% by 2050 without intervention. Policy frameworks integrating carbon markets, agricultural subsidies, and technology transfer agreements have shown promise in pilot programs, though implementation challenges persist regarding monitoring, verification, and equitable burden-sharing among developed and developing nations."
+      },
+      "solution_criteria": [
+        "Extracts distinct topics (climate science, economics, agriculture, policy) as separate items rather than merging them",
+        "Identifies at least 4 primary subject areas from the multidisciplinary passage",
+        "Returns results in valid JSON array format with strings as elements"
+      ],
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a multidisciplinary passage containing mixed topics (e.g., climate science, policy, and economics) to verify the prompt correctly identifies and separates distinct subject areas rather than over-generalizing"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array containing only strings with topic names and no extra commentary. It meets the secondary criteria by identifying distinct topics across four primary subject areas (climate science: climate modeling, greenhouse gas emissions, global precipitation patterns; economics: carbon pricing, emissions reductions, carbon markets; agriculture: agricultural productivity, crop yields, agricultural subsidies; policy: policy frameworks, technology transfer, monitoring/verification, burden-sharing). The extraction is thorough and well-organized, with topics kept as clean, focused items. While a few entries could be slightly more concise, they remain acceptable as single topic references without commentary."
+  },
+  {
+    "output": "```json\n[\n  \"Semantic competence\",\n  \"Pragmatic performance\",\n  \"Language acquisition\",\n  \"Universal grammar\",\n  \"Generative grammar\",\n  \"Usage-based constructionism\",\n  \"Frequency effects\",\n  \"Analogical reasoning\",\n  \"Grammatical patterns\",\n  \"Neuroimaging studies\",\n  \"Sentence comprehension\",\n  \"Rule-governed processing\",\n  \"Statistical pattern recognition\",\n  \"Embodied cognition\",\n  \"Syntactic categories\",\n  \"Semantic correlates\",\n  \"Sensorimotor processing\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The distinction between semantic competence and pragmatic performance in language acquisition remains theoretically contested. While Chomskyan generative frameworks posit an innate universal grammar that constrains the space of possible linguistic structures, usage-based constructionist approaches argue that frequency effects and analogical reasoning sufficiently explain the emergence of grammatical patterns without invoking discrete, pre-specified linguistic modules. This debate intersects with recent neuroimaging studies suggesting that both rule-governed symbolic processing and statistical pattern recognition operate in parallel during sentence comprehension, complicating the traditional dichotomy between competence and performance. Furthermore, the role of embodied cognition in grounding abstract linguistic meaning has prompted reconsideration of whether syntactic categories possess autonomous properties independent of their semantic and sensorimotor correlates."
+      },
+      "solution_criteria": [
+        "Extracts both explicit topics (semantic competence, pragmatic performance, generative grammar, constructionist approaches) and implicit conceptual areas (neuroimaging, embodied cognition, syntax-semantics relationship)",
+        "Captures nuanced theoretical distinctions and debates rather than only surface-level terms",
+        "Returns results as a valid JSON array of strings with no additional fields or explanations"
+      ],
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a dense theoretical passage from philosophy or linguistics that uses abstract concepts and subtle topic distinctions to ensure the prompt can extract nuanced topics that aren't explicitly labeled or obvious"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topic mentions with no extra commentary or fields. It successfully extracts both explicit topics and implicit conceptual areas, capturing the theoretical debate between generative and constructionist approaches, neuroimaging findings, and embodied cognition. The extraction demonstrates understanding of nuanced distinctions rather than surface-level terms. Minor weaknesses include slight over-granularity in some extractions and a missing explicit reference to Chomskyan frameworks, but these do not violate mandatory requirements and represent only marginal improvements to an otherwise comprehensive extraction."
+  },
+  {
+    "output": "```json\n[\n  \"CRISPR-Cas9 gene editing\",\n  \"DNA modifications\",\n  \"Guide RNA\",\n  \"Cas9 endonuclease\",\n  \"Double-strand breaks\",\n  \"Non-homologous end joining\",\n  \"Homology-directed repair\",\n  \"Off-target effects\",\n  \"High-fidelity Cas9 variants\",\n  \"Guide RNA design\",\n  \"Clinical applications\",\n  \"Hematologic disorders\",\n  \"Sickle cell disease\",\n  \"Beta-thalassemia\",\n  \"Ex vivo CRISPR modifications\",\n  \"Gene delivery\",\n  \"In vivo applications\",\n  \"Tissue-specific targeting\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "CRISPR-Cas9 gene editing has revolutionized molecular biology by enabling precise DNA modifications in living cells. The mechanism relies on a guide RNA that directs the Cas9 endonuclease to specific genomic loci, where it creates double-strand breaks that are subsequently repaired through non-homologous end joining or homology-directed repair pathways. Recent advances in off-target effect mitigation, including high-fidelity Cas9 variants and improved guide RNA design algorithms, have significantly enhanced specificity. Clinical applications are emerging in hematologic disorders, with ongoing trials for sickle cell disease and beta-thalassemia demonstrating the therapeutic potential of ex vivo CRISPR modifications. Delivery challenges remain the primary bottleneck, particularly for in vivo applications requiring efficient tissue-specific targeting of editing components."
+      },
+      "solution_criteria": [
+        "Extracts primary topic (CRISPR-Cas9 gene editing) without fragmenting it into overly granular subtopics",
+        "Includes closely related subtopics (mechanism, specificity improvements, clinical applications, delivery challenges) as distinct topics",
+        "Avoids extracting technical details or implementation specifics as separate topics (e.g., 'double-strand breaks' should not be a standalone topic)",
+        "Returns results as a JSON array of strings"
+      ],
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a brief, focused passage from a narrow domain (e.g., molecular biology) containing primarily one main topic with several closely related subtopics to verify the prompt balances between over-segmentation and under-extraction"
+    },
+    "score": 6,
+    "reasoning": "The solution meets all mandatory requirements: it is a valid JSON array of strings with only topic names and no commentary. However, it violates the secondary criteria regarding granularity. The criteria explicitly state that 'double-strand breaks should not be a standalone topic' as it is a technical detail of the mechanism, yet the solution includes this along with other repair pathway specifics. The solution also over-fragments related concepts (Guide RNA vs. Guide RNA design, Cas9 variants vs. specificity improvements). While the extraction is reasonably comprehensive, it fails to properly balance between capturing distinct topics and avoiding excessive technical granularity as specified in the evaluation criteria."
+  }
+]

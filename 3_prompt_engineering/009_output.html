@@ -1,0 +1,234 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">8.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">66.7%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a multidisciplinary passage containing mixed topics (e.g., climate science, policy, and economics) to verify the prompt correctly identifies and separates distinct subject areas rather than over-generalizing</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent climate modeling studies demonstrate that anthropogenic greenhouse gas emissions are driving significant shifts in global precipitation patterns, with implications for agricultural productivity across multiple regions. Economic analyses suggest that carbon pricing mechanisms could incentivize emissions reductions while generating substantial government revenue; however, policymakers face competing priorities between immediate fiscal constraints and long-term climate mitigation goals. The agricultural sector, responsible for approximately 14% of global emissions, simultaneously represents a critical adaptation frontier, as crop yields in sub-Saharan Africa are projected to decline 20-40% by 2050 without intervention. Policy frameworks integrating carbon markets, agricultural subsidies, and technology transfer agreements have shown promise in pilot programs, though implementation challenges persist regarding monitoring, verification, and equitable burden-sharing among developed and developing nations.</td>
+                <td class="criteria">• Extracts distinct topics (climate science, economics, agriculture, policy) as separate items rather than merging them<br>• Identifies at least 4 primary subject areas from the multidisciplinary passage<br>• Returns results in valid JSON array format with strings as elements</td>
+                <td class="output"><pre>```json
+[
+  "Climate modeling",
+  "Greenhouse gas emissions",
+  "Global precipitation patterns",
+  "Agricultural productivity",
+  "Carbon pricing mechanisms",
+  "Emissions reductions",
+  "Climate mitigation",
+  "Agricultural sector emissions",
+  "Crop yields",
+  "Sub-Saharan Africa",
+  "Carbon markets",
+  "Agricultural subsidies",
+  "Technology transfer",
+  "Policy frameworks",
+  "Monitoring and verification",
+  "Burden-sharing",
+  "Developed and developing nations"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array containing only strings with topic names and no extra commentary. It meets the secondary criteria by identifying distinct topics across four primary subject areas (climate science: climate modeling, greenhouse gas emissions, global precipitation patterns; economics: carbon pricing, emissions reductions, carbon markets; agriculture: agricultural productivity, crop yields, agricultural subsidies; policy: policy frameworks, technology transfer, monitoring/verification, burden-sharing). The extraction is thorough and well-organized, with topics kept as clean, focused items. While a few entries could be slightly more concise, they remain acceptable as single topic references without commentary.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a dense theoretical passage from philosophy or linguistics that uses abstract concepts and subtle topic distinctions to ensure the prompt can extract nuanced topics that aren't explicitly labeled or obvious</td>
+                <td class="prompt-inputs"><strong>content:</strong> The distinction between semantic competence and pragmatic performance in language acquisition remains theoretically contested. While Chomskyan generative frameworks posit an innate universal grammar that constrains the space of possible linguistic structures, usage-based constructionist approaches argue that frequency effects and analogical reasoning sufficiently explain the emergence of grammatical patterns without invoking discrete, pre-specified linguistic modules. This debate intersects with recent neuroimaging studies suggesting that both rule-governed symbolic processing and statistical pattern recognition operate in parallel during sentence comprehension, complicating the traditional dichotomy between competence and performance. Furthermore, the role of embodied cognition in grounding abstract linguistic meaning has prompted reconsideration of whether syntactic categories possess autonomous properties independent of their semantic and sensorimotor correlates.</td>
+                <td class="criteria">• Extracts both explicit topics (semantic competence, pragmatic performance, generative grammar, constructionist approaches) and implicit conceptual areas (neuroimaging, embodied cognition, syntax-semantics relationship)<br>• Captures nuanced theoretical distinctions and debates rather than only surface-level terms<br>• Returns results as a valid JSON array of strings with no additional fields or explanations</td>
+                <td class="output"><pre>```json
+[
+  "Semantic competence",
+  "Pragmatic performance",
+  "Language acquisition",
+  "Universal grammar",
+  "Generative grammar",
+  "Usage-based constructionism",
+  "Frequency effects",
+  "Analogical reasoning",
+  "Grammatical patterns",
+  "Neuroimaging studies",
+  "Sentence comprehension",
+  "Rule-governed processing",
+  "Statistical pattern recognition",
+  "Embodied cognition",
+  "Syntactic categories",
+  "Semantic correlates",
+  "Sensorimotor processing"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topic mentions with no extra commentary or fields. It successfully extracts both explicit topics and implicit conceptual areas, capturing the theoretical debate between generative and constructionist approaches, neuroimaging findings, and embodied cognition. The extraction demonstrates understanding of nuanced distinctions rather than surface-level terms. Minor weaknesses include slight over-granularity in some extractions and a missing explicit reference to Chomskyan frameworks, but these do not violate mandatory requirements and represent only marginal improvements to an otherwise comprehensive extraction.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a brief, focused passage from a narrow domain (e.g., molecular biology) containing primarily one main topic with several closely related subtopics to verify the prompt balances between over-segmentation and under-extraction</td>
+                <td class="prompt-inputs"><strong>content:</strong> CRISPR-Cas9 gene editing has revolutionized molecular biology by enabling precise DNA modifications in living cells. The mechanism relies on a guide RNA that directs the Cas9 endonuclease to specific genomic loci, where it creates double-strand breaks that are subsequently repaired through non-homologous end joining or homology-directed repair pathways. Recent advances in off-target effect mitigation, including high-fidelity Cas9 variants and improved guide RNA design algorithms, have significantly enhanced specificity. Clinical applications are emerging in hematologic disorders, with ongoing trials for sickle cell disease and beta-thalassemia demonstrating the therapeutic potential of ex vivo CRISPR modifications. Delivery challenges remain the primary bottleneck, particularly for in vivo applications requiring efficient tissue-specific targeting of editing components.</td>
+                <td class="criteria">• Extracts primary topic (CRISPR-Cas9 gene editing) without fragmenting it into overly granular subtopics<br>• Includes closely related subtopics (mechanism, specificity improvements, clinical applications, delivery challenges) as distinct topics<br>• Avoids extracting technical details or implementation specifics as separate topics (e.g., 'double-strand breaks' should not be a standalone topic)<br>• Returns results as a JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+  "CRISPR-Cas9 gene editing",
+  "DNA modifications",
+  "Guide RNA",
+  "Cas9 endonuclease",
+  "Double-strand breaks",
+  "Non-homologous end joining",
+  "Homology-directed repair",
+  "Off-target effects",
+  "High-fidelity Cas9 variants",
+  "Guide RNA design",
+  "Clinical applications",
+  "Hematologic disorders",
+  "Sickle cell disease",
+  "Beta-thalassemia",
+  "Ex vivo CRISPR modifications",
+  "Gene delivery",
+  "In vivo applications",
+  "Tissue-specific targeting"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array of strings with only topic names and no commentary. However, it violates the secondary criteria regarding granularity. The criteria explicitly state that 'double-strand breaks should not be a standalone topic' as it is a technical detail of the mechanism, yet the solution includes this along with other repair pathway specifics. The solution also over-fragments related concepts (Guide RNA vs. Guide RNA design, Cas9 variants vs. specificity improvements). While the extraction is reasonably comprehensive, it fails to properly balance between capturing distinct topics and avoiding excessive technical granularity as specified in the evaluation criteria.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

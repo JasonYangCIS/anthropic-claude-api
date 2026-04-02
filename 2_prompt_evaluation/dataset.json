@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message using a regular expression",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly capture timestamps in ISO 8601 format, log levels (ERROR, WARN, INFO, DEBUG), and the remaining message content from a single log line"
+  },
+  {
+    "task": "Create a Python function that takes an AWS S3 bucket name and object key as inputs and returns a properly formatted S3 URI",
+    "format": "python",
+    "solution_criteria": "The function should return a valid S3 URI in the format 's3://bucket-name/object-key' and handle edge cases like trailing slashes"
+  },
+  {
+    "task": "Generate a JSON configuration object for an AWS Lambda function that includes environment variables, timeout settings, and memory allocation",
+    "format": "json",
+    "solution_criteria": "The JSON should be valid and include all required Lambda configuration fields such as Timeout, MemorySize, and Environment variables with proper nesting"
+  }
+]

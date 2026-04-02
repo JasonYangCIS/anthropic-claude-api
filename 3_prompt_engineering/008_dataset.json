@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "70",
+      "weight": "165",
+      "goal": "1-day meal plan for a cyclist with a high-intensity 2-hour training session in the afternoon",
+      "restrictions": "vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan includes 4-5 meals/snacks distributed throughout the day",
+      "Caloric and carbohydrate intake is elevated to support the 2-hour high-intensity cycling session",
+      "All meals and snacks comply with vegetarian and no-nuts restrictions",
+      "Meals are concise and practical for a single day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an endurance sport athlete (e.g., cyclist) with varying intensity training days to confirm the meal plan adapts caloric and nutrient needs based on activity levels"
+  },
+  {
+    "prompt_inputs": {
+      "height": "70 inches",
+      "weight": "160 pounds",
+      "goal": "Marathon training - maximize carbohydrate intake and sustained energy for high-intensity endurance performance",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan contains exactly 4-5 meals distributed throughout the day",
+      "Carbohydrates comprise 55-65% of total daily calories with emphasis on complex carbs",
+      "Protein intake is 1.2-1.6g per pound of body weight to support muscle recovery",
+      "Each meal includes specific food examples and approximate portion sizes"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-intensity sport athlete (e.g., marathon runner) requiring elevated calorie and carbohydrate intake to assess proper macro-nutrient distribution across meals"
+  },
+  {
+    "prompt_inputs": {
+      "height": "72",
+      "weight": "200",
+      "goal": "Build muscle and strength through weightlifting with optimal protein timing around training sessions",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan includes 4-5 meals distributed throughout the day with pre- and post-workout nutrition timing",
+      "Total daily protein meets or exceeds 160g (0.8g per pound of body weight) with protein distributed across meals",
+      "Includes specific meal recommendations with approximate macronutrient content for each meal",
+      "Plan is compact and presented in a clear, easy-to-follow format suitable for one day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength-based sport athlete (e.g., weightlifter) with specific protein requirements and meal timing around training sessions to verify workout nutrition strategies"
+  }
+]
