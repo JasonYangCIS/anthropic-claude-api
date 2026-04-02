@@ -1,11 +1,14 @@
 [
   {
-    "task": "Write a regular expression to validate an AWS S3 bucket name. The bucket name must be between 3-63 characters, contain only lowercase letters, numbers, hyphens, and periods, start and end with a letter or number, and not contain consecutive hyphens or periods."
+    "task": "Parse an AWS S3 bucket name from a given S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and extract just the bucket name",
+    "format": "regex"
   },
   {
-    "task": "Write a Python function that takes an AWS CloudWatch log event and extracts the timestamp, log level (ERROR, WARN, INFO, DEBUG), and message. The function should return a dictionary with keys 'timestamp', 'level', and 'message'."
+    "task": "Create a JSON CloudFormation template snippet that defines an AWS Lambda function with basic properties including FunctionName, Runtime, Role, and Handler",
+    "format": "json"
   },
   {
-    "task": "Write a JSON object that represents an AWS IAM policy granting read-only access to a specific S3 bucket named 'my-data-bucket' and all its objects, while explicitly denying any write operations."
+    "task": "Write a Python function that takes an AWS IAM policy document (as a dict) and returns a list of all Action strings granted by the policy",
+    "format": "python"
   }
 ]
