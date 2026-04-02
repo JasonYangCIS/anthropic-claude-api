@@ -1,11 +1,11 @@
 [
   {
-    "task": "Write a Python function that extracts the AWS account ID from an ARN string. The function should take an ARN like 'arn:aws:s3:::my-bucket' or 'arn:aws:ec2:us-east-1:123456789012:instance/i-1234567890abcdef0' and return the account ID if present, or None if not."
+    "task": "Write a regular expression to validate an AWS S3 bucket name. The bucket name must be between 3-63 characters, contain only lowercase letters, numbers, hyphens, and periods, start and end with a letter or number, and not contain consecutive hyphens or periods."
   },
   {
-    "task": "Create a JSON object that represents an AWS IAM policy allowing read-only access to a specific S3 bucket named 'my-data-bucket'. The policy should include the Principal, Effect, Action, and Resource fields with appropriate values."
+    "task": "Write a Python function that takes an AWS CloudWatch log event and extracts the timestamp, log level (ERROR, WARN, INFO, DEBUG), and message. The function should return a dictionary with keys 'timestamp', 'level', and 'message'."
   },
   {
-    "task": "Write a regular expression that matches valid AWS S3 bucket names. Valid bucket names must be 3-63 characters long, contain only lowercase letters, numbers, hyphens, and periods, start and end with a letter or number, and cannot contain consecutive hyphens or end with a hyphen."
+    "task": "Write a JSON object that represents an AWS IAM policy granting read-only access to a specific S3 bucket named 'my-data-bucket' and all its objects, while explicitly denying any write operations."
   }
 ]
