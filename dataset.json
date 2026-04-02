@@ -2,50 +2,48 @@
   {
     "prompt_inputs": {
       "height": "70",
-      "weight": "185",
-      "goal": "Build muscle and strength through weightlifting",
-      "restrictions": "Vegetarian"
+      "weight": "165",
+      "goal": "maintain athletic performance for soccer with high energy demands",
+      "restrictions": "vegan diet, no animal products"
     },
     "solution_criteria": [
-      "Meal plan covers one full day with at least 4 meals/snacks",
-      "Includes high-protein vegetarian options (legumes, dairy, eggs, tofu, nuts) meeting ~1.6-2.2g protein per lb bodyweight",
-      "At least one meal timed within 2 hours before or after workout",
-      "Compact format with clear meal timing and macronutrient focus"
+      "Meal plan covers all meals for one day (breakfast, lunch, dinner, snacks)",
+      "All foods are vegan with no animal products",
+      "Includes complete protein sources and iron-rich foods suitable for an athlete",
+      "Plan is compact and concise (brief descriptions, not lengthy)"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a strength-training athlete (weightlifter) with dietary restrictions (vegetarian) requiring high protein alternatives and meal timing around workout windows"
+    "scenario": "Testing with a sport-specific dietary constraint (vegan soccer player) requiring complete protein sources and iron-rich foods while maintaining athletic performance"
   },
   {
     "prompt_inputs": {
       "height": "70 inches",
-      "weight": "155 pounds",
-      "goal": "Marathon training with high carbohydrate intake and strategic hydration for endurance performance",
-      "restrictions": "Vegetarian, no nuts"
+      "weight": "160 pounds",
+      "goal": "Marathon training with peak performance during a 20-mile long run scheduled for 10 AM",
+      "restrictions": "None"
     },
     "solution_criteria": [
-      "Meal plan covers all meals and snacks for one full day with appropriate timing around training",
-      "Carbohydrate-focused nutrition with high total daily carbs suitable for marathon training",
-      "Includes specific hydration recommendations with timing throughout the day",
-      "Respects vegetarian diet and nut-free restrictions in all meals"
+      "Meal plan contains exactly 1 day of meals with appropriate timing around the 10 AM training session",
+      "Includes high carbohydrate intake (55-65% of calories) suitable for endurance athlete",
+      "Pre-workout meal provided 2-3 hours before training and post-workout meal within 30-60 minutes after completion"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a high-intensity endurance athlete (marathon runner) requiring high carbohydrate intake and specific hydration timing throughout the day"
+    "scenario": "Testing with a high-performance endurance athlete (marathon runner) requiring high carbohydrate intake and specific timing around training sessions"
   },
   {
     "prompt_inputs": {
       "height": "70",
       "weight": "185",
-      "goal": "Recovery nutrition for swimmer returning from shoulder injury while maintaining aerobic capacity",
-      "restrictions": "No processed foods, gluten-free, allergic to shellfish"
+      "goal": "Build muscle and strength through weightlifting with 4-hour gym session at 10 AM",
+      "restrictions": "None"
     },
     "solution_criteria": [
-      "Meal plan spans exactly 1 day with breakfast, lunch, dinner, and 1-2 snacks",
-      "Includes anti-inflammatory foods (fatty fish, berries, leafy greens, turmeric) appropriate for injury recovery",
-      "Provides adequate protein (0.7-1g per lb body weight) to support muscle recovery",
-      "Portions are modified to accommodate post-injury reduced training load while maintaining athlete nutrition standards",
-      "All foods comply with stated restrictions (no processed foods, gluten-free, no shellfish)"
+      "Meal plan covers exactly 1 day with 4-5 meals strategically timed around the 10 AM workout",
+      "Provides adequate protein intake (minimum 1g per pound of body weight = 185g total)",
+      "Includes pre-workout and post-workout nutrition within 1-2 hours of gym session",
+      "Plan is compact and concise (brief descriptions, not lengthy explanations)"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a sport-specific athlete (swimmer) recovering from injury, requiring anti-inflammatory foods and modified portions while maintaining performance nutrition standards"
+    "scenario": "Testing with a strength/power athlete (weightlifter) with specific protein requirements and meal timing around intense gym sessions"
   }
 ]
